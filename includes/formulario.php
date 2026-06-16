@@ -5,21 +5,21 @@
 				<div class="col-md-12">
 					<div class="card-body">
 						<h4 class="f-w-400">Cadastrar Aluno</h4>
-						<hr> <form action="index.html" method="GET">
+						<hr> 
 
 
 
-    <form action="post">
+    <form action="cadastrar.php" method="POST">
     
                             <div class="form-group mb-3">
                                 <label for="date">Digite seu nome completo:</label>
-                                <input type="text" class="form-control" id="Username" placeholder="Nome completo" maxlength="225" required>
+                                <input type="text" class="form-control" id="Username" placeholder="Nome completo" maxlength="225">
                             </div> <!--Nome para digitar-->
     
     
                             <div class="form-group mb-3">
                                 <label for="date">Digite seu cpf:</label>
-                                <input type="tel" class="form-control" placeholder="000 000 000 00"  minlength="12" maxlength="14" pattern="(?:\d\s*){11}" title="Formato esperado: 000 000 000 00" required>
+                                <input type="tel" class="form-control" placeholder="000 000 000 00"  minlength="12" maxlength="14" pattern="(?:\d\s*){11}" title="Formato esperado: 000 000 000 00">
     
     
                             </div> <!--Cpf para digitar-->
@@ -27,19 +27,19 @@
     
                             <div class="form-group mb-3">
                                 <label for="date">Data de nascimento:</label>
-                                <input type="date" class="form-control" placeholder="Data nascimento" required>
+                                <input type="date" class="form-control" placeholder="Data nascimento">
                             </div> <!--Data para digitar-->
     
     
                             <div class="form-group mb-3">
                                 <label for="text">Numero de telefone:</label>
     
-                                <input type="tel" class="form-control" placeholder="55 12 1234-5678"  minlength="12" maxlength="16" pattern="[0-9]{2}\s[0-9]{2}\s[0-9]{4,5}-[0-9]{4}" title="Formato esperado: 55 19 91234-5678" required> <!--numero de telefone-->
+                                <input type="tel" class="form-control" placeholder="55 12 1234-5678"  minlength="12" maxlength="16" pattern="[0-9]{2}\s[0-9]{2}\s[0-9]{4,5}-[0-9]{4}" title="Formato esperado: 55 19 91234-5678"> <!--numero de telefone-->
                             </div>
     
                             <div class="form-group mb-3">
                                 <label for="date">Digite seu endereço:</label>
-                                <input type="text" class="form-control" placeholder="Endereço" maxlength="150" required>
+                                <input type="text" class="form-control" placeholder="Endereço" maxlength="150">
                             </div> <!--endereço-->
     
     

@@ -60,7 +60,7 @@
 						<label>Navegação</label>
 					</li>
 					<li class="nav-item">
-					    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Início</span></a>
+					    <a href="index.php" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Início</span></a>
 					</li>
 
                     <li class="nav-item pcoded-hasmenu">
