@@ -1,44 +1,88 @@
 <?php
 
-namespace App\Enitity;
+namespace app\Entity;
 
-use \App\Db\Database;
+use \app\Db\Database;
 use \PDO;
 
-require_once 'index.php';
-include __DIR__.'/includes/formulario.php';
+require_once 'app/Db/Database.php';
 
-class usuario{
 
-    public $id;
+class Usuario{
+    /**
+     * @var string
+     * 
+     */
+    public $idUsuario;
+    
+    
+    /**
+     * @var string
+     * 
+     */
     public $nome;
+
+
+    /**
+     * @var string
+     * 
+     */
     public $cpf;
+    
+    
+    /**
+     * @var string
+     * 
+     */
     public $data_nasc;
-    public $telefone;
+    
+
+    /**
+     * @var string
+     * 
+     */
+    public $telef;
+
+
+    /**
+     * @var string
+     * 
+     */
     public $endereco;
+
+
+    /**
+     * @var string
+     * 
+     */
     public $status;
+   
 
 
+    /**
+     * @return boolean
+     * 
+     */
     public function cadastrar(){
         $obDatabase = new Database('usuario');
-        $this->id = $obDatabase-> insert([
+        $this->idUsuario = $obDatabase-> insert([
 
 
 
             'nome' => $this->nome,
             'cpf' => $this->cpf,
             'data_nasc' => $this->data_nasc,
-            'telefone' => $this->telefone,
+            'telef' => $this->telef,
             'endereco' => $this->endereco,
-            'status' => $this->status
+            'status' => 'ativo'
 
             
         ]);
         
     }
 
-    public static function getUsuario($where = null, $order = null, $limit = null){
-        return(new Database('vagas'))->select($where,$order,$limit)
+    public static function getUsuarios($where = null, $order = null, $limit = null){
+        return(new Database('usuario'))->select($where,$order,$limit)
                                     ->fetchAll(PDO::FETCH_CLASS,self::class);
 
     }

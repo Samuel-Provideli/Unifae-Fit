@@ -1,22 +1,59 @@
 <?php
 
-namespace App\Db;
+namespace app\Db;
 
 use \PDO;
 use \PDOException;
 
 class Database{
 
+
+     /**
+     * @var string
+     * 
+     */
     const HOST = 'localhost';
+
+     /**
+     * @var string
+     * 
+     */
     const NAME = 'academia_banco';
+
+     /**
+     * @var string
+     * 
+     */
     const USER = 'root';
+
+     /**
+     * @var string
+     * 
+     */
     const PASS = '1234';
+
+     /**
+     * @var string
+     * 
+     */
     const MENSAGEM = 'Erro no sistema';
 
+    /**
+     * @var string
+     * 
+     */
     private $table;
+
+    /**
+     * @var PDO
+     * 
+     */
     private $connection;
     
 
+
+
+    
     public function __construct($table = null)
     {
         $this->table = $table;
@@ -26,10 +63,14 @@ class Database{
 
     private function setConnection(){
         try{
-            $this->connection = new PDO('mysql:host='.self::HOST. ';dbnmame='.self::NAME,self::USER,self::PASS);
+            $this->connection = new PDO(
+                'mysql:host='.self::HOST.';dbname='.self::NAME,
+                self::USER,
+                self::PASS
+            );
             $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION); 
         }catch(PDOException $e){
-            die('ERROR:'. self::MENSAGEM);
+            die($e->getMessage());
         }
     }
 
@@ -39,7 +80,7 @@ class Database{
             $statement->execute($params);
             return $statement;
         }catch(PDOException $e){
-            die('ERROR:'. self::MENSAGEM);
+            die($e->getMessage());
         }
     }
 
@@ -61,11 +102,11 @@ class Database{
     public function select($where = null, $order = null, $limit = null, $fields = '*'){
 
         $where = strlen($where) ? 'WHERE '.$where: '';
-        $order = strlen($order) ? 'ORDER BY '.$where: '';
+        $order = strlen($order) ? 'ORDER BY '.$order: '';
         $limit = strlen($limit) ? 'LIMIT '.$limit: '';
 
 
-        $query = 'SELECT '.$fields. 'FROM'.$this->table.' '.$where.''.$order.''.$limit;
+        $query = 'SELECT '.$fields. 'FROM '.$this->table.' '.$where.''.$order.''.$limit;
         return $this->execute($query);
     }
 
