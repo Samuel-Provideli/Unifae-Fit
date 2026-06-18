@@ -87,8 +87,12 @@ class Usuario{
 
     }
 
+    //  Configuraçao de um antigo botao de editar desnecessario para adminstradores:
 
-
+    //  public static function getUsuario($idUsuario){
+    //     return(new Database('usuario'))->select('idUsuario = '. $idUsuario)
+    //                                     ->fetchObject(self::class);
+    //  }
 
 
 }

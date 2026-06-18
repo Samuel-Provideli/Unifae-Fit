@@ -16,15 +16,14 @@ if(isset($_POST['nome'],$_POST['cpf'],$_POST['data_nasc'],$_POST['telefone'],$_P
     $obUsuario-> cadastrar();
     
     
-    header('location: index.php?status=success');
-    exit;
+   
 } else {
-    header('location: index.php?status=error');
+    header('location: realizar-cadastro.php?status=error');
     exit;
 }
 
 include __DIR__.'/includes/header.php';
-// include __DIR__.'/includes/listagem.php';
+include __DIR__.'/includes/listagem.php';
 include __DIR__.'/includes/footer.php';
 
 
