@@ -3,34 +3,34 @@
 use \app\Entity\Planos;
 
 require_once 'app/Entity/Planos.php';
+require_once 'includes/formulario-planos.php';
 
 
-if(isset($_POST['nome_plano'],$_POST['desc_plano'],$_POST['duracao_planos'],$_POST['valor_plano'],$_POST['qnt_aulas'],$_POST['status_plano'])
-    && ($_POST['nome'] != null)){
-    $obUsuario = new Planos;
-    $obUsuario->nome_plano = $_POST['nome_plano'];
-    $obUsuario->desc_plano = $_POST['desc_plano'];
-    $obUsuario->duracao_plano = $_POST['duracao_plano'];
-    $obUsuario->valor_plano = $_POST['valor_plano'];
-    $obUsuario->qnt_aulas = $_POST['qnt_aulas'];
-    $obUsuario->status_plano = $_POST['status_plano'];
-    $obUsuario-> cadastrarPlanos();
+$obPlanos = new Planos;
+if(isset($_POST['nome_plano'],$_POST['desc_plano'],$_POST['duracao_planos'],$_POST['valor_plano'],$_POST['qnt_aulas'],$_POST[true])){
+    $obPlanos->nome_plano = $_POST['nome_plano'];
+    $obPlanos->desc_plano = $_POST['desc_plano'];
+    $obPlanos->duracao_plano = $_POST['duracao_plano'];
+    $obPlanos->valor_plano = $_POST['valor_plano'];
+    $obPlanos->qnt_aulas = $_POST['qnt_aulas'];
+    $obPlanos->status_plano = $_POST['status_plano'];
+    $obPlanos-> cadastrarPlanos();
     
     
    
 } else {
-    header('location: realizar-cadastro.php?status=error');
-    exit;
+    print_r($obPlanos);
+
 }
 
 include __DIR__.'/includes/header.php';
-include __DIR__.'/includes/listagem.php';//alterar!!
+include __DIR__.'/includes/listagem-planos.php';//alterar!!
 include __DIR__.'/includes/footer.php';
 
 
-//Passos para o dia 19 6 26
-//Substituir a listagem do include DIR do cadastrar aluno por outro formulario com os planos! para na hora do cadastro ja unir o cadastro de planos
-// ai no final colocar um botao para voltar ao inicio e ter acesso as tabelas
+//Para a outra semana ver por que o banco de dados nao esta guardando os dados do banco
+//usar var dump ou printr para testar e ver onde esta dando erro!
+// 
 
 
 

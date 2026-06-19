@@ -34,7 +34,7 @@ require_once 'app/Db/Database.php';
                 'duracao_plano'=> $this -> duracao_plano,
                 'valor_plano'=> $this -> valor_plano,
                 'qnt_aulas'=> $this -> qnt_aulas,
-                'status_plano'=> $this -> status_plano
+                'status_plano'=> true
 
 
             ]);

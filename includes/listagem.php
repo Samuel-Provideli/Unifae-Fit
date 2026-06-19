@@ -21,8 +21,7 @@ foreach($usuarios as $usuario){
                     
                     </tr>';
                 }
-                
-                
+            
                 
 ?>
                 

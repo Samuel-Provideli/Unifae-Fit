@@ -10,7 +10,7 @@ $resultado = '';
 
 foreach($plano as $planos){
     $resultado .= '<tr>
-                    <td>'.$planos->idUsuario.'</td>
+                    <td>'.$planos->idPlanos.'</td>
                     <td>'.$planos->nome_plano.'</td>
                     <td>'.$planos->desc_plano.'</td>
                     <td>'.$planos->duracao_plano.'</td>

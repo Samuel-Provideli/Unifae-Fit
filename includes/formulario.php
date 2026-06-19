@@ -57,3 +57,11 @@
 
 
 </main>
+
+ <!-- <div class="form-group mb-3">
+                                <select name="plataforma" required="required" class="form-control">
+                                    <option value="">Escolha um plano</option>
+                                    <option value="Básico">Básico</option> 
+                                    <option value="Intermediário">Intermediário</option>
+                                    <option value="Premium">Premium</option>
+                                </select>                     OPCAO DE ESCOLHAS PARA INCLUIR FUTURAMENTE NO FORM DO USUAURIO-->

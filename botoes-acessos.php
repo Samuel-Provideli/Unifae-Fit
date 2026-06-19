@@ -8,25 +8,37 @@
 	<div style="display: flex; justify-content:space-around;">
 			<div class="card text-center"  style="width: 20%; margin-top: 5%;">
 										<div class="card-body">
-											<h5 class="card-title">Acessar alunos Cadastrados</h5>
-											<p class="card-text">Todos os cadastros dos alunos.</p>
+											<h5 class="card-title">Acessar alunos cadastrados</h5>
+											<p class="card-text">Acessar os cadastros dos alunos.</p>
 											<a href="lista-usuario.php" class="btn btn-primary">Acessar</a>
 										</div>
 									</div>
+
+
+
+
+			<div class="card text-center"  style="width: 20%; margin-top: 5%;">
+										<div class="card-body">
+											<h5 class="card-title">Ver planos cadastrados</h5>
+											<p class="card-text">Acessar planos ja cadastrados</p>
+											<a href="lista-planos.php" class="btn  btn-primary">Acessar</a>
+										</div>
+									</div>
+
+
+
+
+
 			<div class="card text-center"  style="width: 20%; margin-top: 5%;">
 										<div class="card-body">
 											<h5 class="card-title">Ver Planos e Alunos</h5>
 											<p class="card-text">Acessar alunos com os planos.</p>
-											<a href="lista-planos.php" class="btn  btn-primary">Acessar</a>
-										</div>
-									</div>
-			<div class="card text-center"  style="width: 20%; margin-top: 5%;">
-										<div class="card-body">
-											<h5 class="card-title">Special title treatment</h5>
-											<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 											<a href="#!" class="btn  btn-primary">Acessar</a>
 										</div>
 									</div>
+
+
+
 			<div class="card text-center"  style="width: 20%; margin-top: 5%;">
 										<div class="card-body">
 											<h5 class="card-title">Special title treatment</h5>
@@ -39,11 +51,20 @@
 
 
 								</div>
-								<div class="card text-center"  style="width: 20%; margin-top: 5%; margin:auto;">
-															<div class="card-body">
-																<a href="realizar-cadastro.php"><button type="button" class="btn btn-primary">Fazer um Cadastro</button></a>
+								<div style="display: flex; margin-top:5%;">
+									
+									<div class="card text-center"  style="width: 20%; margin-top: 5%; margin:auto;">
+																<div class="card-body">
+																	<a href="realizar-cadastro.php"><button type="button" class="btn btn-primary">Fazer um Cadastro</button></a>
+																</div>
 															</div>
-														</div>
+
+									<div class="card text-center"  style="width: 20%; margin-top: 5%; margin:auto;">
+																<div class="card-body">
+																	<a href="realizar-cadastro-plano.php"><button type="button" class="btn btn-primary">Cadastrar um Plano</button></a>
+																</div>
+															</div>
+								</div>
 							</div>				
 						</div>
                 
