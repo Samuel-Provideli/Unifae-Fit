@@ -9,7 +9,7 @@
 
 
 
-    <form action="cadastrar-planos.php" method="post">
+    <form action="pagamentos-realizados.php" method="post">
     
                             <div class="form-group mb-3">
                                 <label for="text">Digite o nome do novo Plano:</label>

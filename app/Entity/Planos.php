@@ -7,8 +7,8 @@ use \PDO;
 
 require_once 'app/Db/Database.php';
 
-
-    class planos{
+//erro estava no p minusculo o correto foi deixar maiusculo P, resolveu o erro de ficar quebrando a pagina.
+    class Planos{
 
         public $idPlanos;
 
@@ -29,16 +29,15 @@ require_once 'app/Db/Database.php';
            $obDatabase = new Database('planos');
             $this -> idPlanos = $obDatabase -> insert([
 
-                'nome_plano'=> $this -> nome_plano,
-                'desc_plano'=> $this -> desc_plano,
-                'duracao_plano'=> $this -> duracao_plano,
-                'valor_plano'=> $this -> valor_plano,
-                'qnt_aulas'=> $this -> qnt_aulas,
-                'status_plano'=> true
+                'nome_plano'=> $this->nome_plano,
+                'desc_plano'=> $this->desc_plano,
+                'duracao_plano'=> $this->duracao_plano,
+                'valor_plano'=> $this->valor_plano,
+                'qnt_aulas'=> $this->qnt_aulas,
+                'status_plano'=> 1
 
 
             ]);
-
         
         }
         public static function getPlanos($where = null, $order = null, $limit = null){

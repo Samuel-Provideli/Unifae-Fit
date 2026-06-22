@@ -41,9 +41,9 @@
 
 			<div class="card text-center"  style="width: 20%; margin-top: 5%;">
 										<div class="card-body">
-											<h5 class="card-title">Special title treatment</h5>
-											<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-											<a href="#!" class="btn  btn-primary">Acessar</a>
+											<h5 class="card-title">Ver Pagamentos</h5>
+											<p class="card-text">Acessar pagamentos e pendêcias.</p>
+											<a href="realizar-pagamentos.php" class="btn  btn-primary">Acessar</a>
 										</div>
 									</div>
 

@@ -28,8 +28,6 @@ class Usuario{
         $obDatabase = new Database('usuario');
         $this->idUsuario = $obDatabase-> insert([
 
-
-
             'nome' => $this->nome,
             'cpf' => $this->cpf,
             'data_nasc' => $this->data_nasc,

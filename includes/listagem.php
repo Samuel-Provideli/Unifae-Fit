@@ -13,7 +13,7 @@ foreach($usuarios as $usuario){
                     <td>'.$usuario->idUsuario.'</td>
                     <td>'.$usuario->nome.'</td>
                     <td>'.$usuario->cpf.'</td>
-                    <td>'.$usuario->data_nasc.'</td>
+                    <td>'.date("d/m/Y", strtotime($usuario->data_nasc)).'</td> 
                     <td>'.$usuario->telef.'</td>
                     <td>'.$usuario->endereco.'</td>
                     <td>'.$usuario->status.'</td>
@@ -21,7 +21,7 @@ foreach($usuarios as $usuario){
                     
                     </tr>';
                 }
-            
+            //basicamnete a questao da data mostra a data correta porem no formato brasileiro, pois entra no date e a funçao strotime indica qual data deve ficar no padrão.
                 
 ?>
                 

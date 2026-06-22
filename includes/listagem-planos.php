@@ -35,7 +35,7 @@ foreach($plano as $planos){
                     <th>ID</th>
                     <th>Nome do plano</th>
                     <th>Descrição</th>
-                    <th>Duração</th>
+                    <th>Duração De dias</th>
                     <th>Valor</th>
                     <th>Quantidade de aulas</th>
                     <th>Status do plano</th>

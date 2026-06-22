@@ -3,23 +3,24 @@
 use \app\Entity\Planos;
 
 require_once 'app/Entity/Planos.php';
-require_once 'includes/formulario-planos.php';
 
+
+//Erro resolvido, foi remover o status que estava causando erro, outro erro era um nome no plural e embaixo estar no singular
 
 $obPlanos = new Planos;
-if(isset($_POST['nome_plano'],$_POST['desc_plano'],$_POST['duracao_planos'],$_POST['valor_plano'],$_POST['qnt_aulas'],$_POST[true])){
+if(isset($_POST['nome_plano'],$_POST['desc_plano'],$_POST['duracao_plano'],$_POST['valor_plano'],$_POST['qnt_aulas'])){
     $obPlanos->nome_plano = $_POST['nome_plano'];
     $obPlanos->desc_plano = $_POST['desc_plano'];
     $obPlanos->duracao_plano = $_POST['duracao_plano'];
     $obPlanos->valor_plano = $_POST['valor_plano'];
     $obPlanos->qnt_aulas = $_POST['qnt_aulas'];
-    $obPlanos->status_plano = $_POST['status_plano'];
     $obPlanos-> cadastrarPlanos();
     
     
    
 } else {
-    print_r($obPlanos);
+    header('location: cadastrar-planos.php?status=error');
+    exit;
 
 }
 
