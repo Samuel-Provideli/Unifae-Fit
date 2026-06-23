@@ -1,22 +1,25 @@
 <?php
 
-use app\Entity\Pagamentos;
-use \app\Entity\Planos;
+use app\Entity\Pagamento;
 
-require_once 'app\Entity\Planos.php';
+require_once 'app/Entity/Pagamentos.php';
 
-$pagamento = Pagamentos::getPagamentos();
+$pagamento = Pagamento::getPagamentos();
 
 $resultado = '';
+
+                                                //na ordem correta voce invez de colocar o id_(foreikey) voce coloca o nome da coluna que quer puxar o dado para mostrar, no caso foi o nome da pessoa, somente aqui se coloca o dado que quer puxar, porem deve estar de acordo com o dataBase tmb no select feito!
 
     foreach($pagamento as $pagamentos){
         $resultado .= '<tr>
                     <td>'.$pagamentos->idPagamentos.'</td>
+                    <td>'.$pagamentos->nome.'</td> 
                     <td>'.$pagamentos->data_venc.'</td>
                     <td>'.$pagamentos->data_pag.'</td>
                     <td>'.$pagamentos->valor_pag.'</td>
                     <td>'.$pagamentos->forma_pag.'</td>
-                    <td>'.$pagamentos->status_pag.'</td>
+                    <td>'.$pagamentos->status_pago.'</td>
+                
                     
                     </tr>';
     }
@@ -34,6 +37,7 @@ $resultado = '';
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Nome do aluno</th>
                     <th>Data de vencimento</th>
                     <th>Data de pagamentos</th>
                     <th>Valor a ser pago</th>

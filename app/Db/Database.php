@@ -110,6 +110,21 @@ class Database{
         return $this->execute($query);
     }
 
+    public function selectPagamentos($where = null, $order = null, $limit = null){
+
+        $fields = 'p.idPagamento, u.nome , p.data_pag, p.data_venc, p.valor_pag, p.forma_pag, p.status_pago'; //basicamnete pegou o valor de filds e setou o codg usado no banco de dados do join
+        $table = 'pagamento AS p JOIN usuario AS u ON p.id_usuario = u.idUsuario';//onde ja esta setado from no comando dividiu em dois, por isso o uso de uma var chamada table com o restante dos dados
+        
+        $where = strlen($where) ? 'WHERE '.$where: '';
+        $order = strlen($order) ? 'ORDER BY '.$order: '';
+        $limit = strlen($limit) ? 'LIMIT '.$limit: '';
+
+
+        $query = 'SELECT '.$fields. ' FROM '.$table.' '.$where.''.$order.''.$limit; //o programa vai ler e intepretar como se estivesse digitando no proprio banco de dados, realizando oq este select quer, basicamente Select e From sao comandos basicos do banco o resto é guardado por variaveis e complementados neste codg
+        return $this->execute($query);
+
+        
+    }
 
 
 

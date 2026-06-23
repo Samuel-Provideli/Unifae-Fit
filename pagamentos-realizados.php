@@ -1,23 +1,24 @@
 <?php
 
-use \app\Entity\Pagamentos;
+use \app\Entity\Pagamento;
+use \app\Entity\Usuario;
 
 require_once 'app/Entity/Pagamentos.php';
 
-$obPagamentos = new Pagamentos;
-if(isset($_POST['data_venc'],$_POST['data_pag'],$_POST['valor_pag'],$_POST['forma_pag'],$_POST['status_pag'] /**deve ver como inserir a chave estrangeira */ )){
+
+$obPagamentos = new Pagamento;
+if(isset($_POST['id_usuario'],$_POST['data_venc'],$_POST['data_pag'],$_POST['valor_pag'],$_POST['forma_pag'] /**deve ver como inserir a chave estrangeira */ )){
+    $obPagamentos->id_usuario = $_POST['id_usuario'];
     $obPagamentos->data_venc = $_POST['data_venc'];
     $obPagamentos->data_pag = $_POST['data_pag'];
     $obPagamentos->valor_pag = $_POST['valor_pag'];
     $obPagamentos->forma_pag = $_POST['forma_pag'];
-    $obPagamentos->status_pag = $_POST['status_pag'];
     $obPagamentos-> realizarPagamento();
     
+    print_r($obPagamentos);
     
-   
+   //PARA QUINTA VER O ERRO DE NAO PUXAR O ID DE PAGAMENTOS!
 } else {
-    header('location: realizar-pagamentos.php?status=error');
-    exit;
 
 }
 

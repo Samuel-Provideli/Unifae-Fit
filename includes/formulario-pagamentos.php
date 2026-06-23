@@ -4,7 +4,7 @@
 			<div class="align-items-center">
 				<div class="col-md-12">
 					    <div class="card-body">
-						<h4 class="f-w-400">Cadastrar Plano</h4>
+						<h4 class="f-w-400">Cadastrar Pagamento:</h4>
 						<hr> 
 
 
@@ -12,34 +12,38 @@
     <form action="pagamentos-realizados.php" method="post">
     
                             <div class="form-group mb-3">
-                                <label for="text">Digite o nome do novo Plano:</label>
-                                <input type="text" name="nome_plano" class="form-control" id="Username" placeholder="Nome do plano" maxlength="150">
+                                <label for="text">Digite o nome do aluno:</label>
+                                <input type="text" name="id_usuario" class="form-control" id="Username" placeholder="Nome do aluno" maxlength="150">
                             </div> <!--Nome do plano-->
 
-
-                            <div class="form-group mb-3">
-                                <label for="text">Digite uma breve descrição do plano:</label>
-                                <input type="text" name="desc_plano" class="form-control" id="Username" placeholder="Descrição" maxlength="255">
-                            </div> <!--Nome do plano-->
-    
-    
                             
                             <div class="form-group mb-3">
-                                <label for="num">Duração do plano:</label>
-                                <input type="num" name="duracao_plano" class="form-control" placeholder="Duração">
+                                <label for="date">Data do pagamento:</label>
+                                <input type="date" name="data_pag" class="form-control" placeholder="Data nascimento">
                             </div> <!--Data para digitar-->
+
+                            <div class="form-group mb-3">
+                                <label for="date">Data do vencimento:</label>
+                                <input type="date" name="data_venc" class="form-control" placeholder="Data nascimento">
+                            </div> <!--Data para digitar-->
+    
                             
                             
                             <div class="form-group mb-3">
-                                <label for="num">Valor do Plano</label>
-                                <input type="text" id="num" name="valor_plano" maxlength="5" class="form-control" placeholder="Valor" pattern="^[0-9]{1,4}(.[0-9]{1,3})?$"> <!--valor do plano-->
+                                <label for="num">Valor do pagamento:</label>
+                                <input type="text" id="num" name="valor_pag" maxlength="6" class="form-control" placeholder="Valor" pattern="^[0-9]{1,4}(.[0-9]{1,3})?$"> <!--valor do plano-->
                             </div>
 
 
                             <div class="form-group mb-3">
-                                <label for="num">Quantidade de Aulas</label>
-                                <input type="text" id="num" name="qnt_aulas" maxlength="5" class="form-control" placeholder="Quantidade de aulas" pattern="(?:\d\s*){1,5}" title="Formato esperado: 12345">
-                            </div>  <!--digitar o qnt de aulas-->
+                                <select name="forma_pag" required="required" class="form-control mb-4 mt-4" >
+                                    <option value="">Forma de Pagamento:</option>
+                                    <option value="dinheiro">Dinheiro</option> 
+                                    <option value="pix">Pix</option>
+                                    <option value="cartão">Cartão</option>
+                                    <option value="boleto">Boleto</option>
+                                </div>
+                                </select> 
                             
                             
                             <button class="btn btn-primary btn-block mb-4" type="submit">Cadastrar Plano</button>

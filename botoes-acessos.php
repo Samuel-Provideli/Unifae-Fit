@@ -43,7 +43,7 @@
 										<div class="card-body">
 											<h5 class="card-title">Ver Pagamentos</h5>
 											<p class="card-text">Acessar pagamentos e pendêcias.</p>
-											<a href="realizar-pagamentos.php" class="btn  btn-primary">Acessar</a>
+											<a href="lista-pagamentos.php" class="btn  btn-primary">Acessar</a>
 										</div>
 									</div>
 
@@ -59,6 +59,11 @@
 																</div>
 															</div>
 
+									<div class="card text-center"  style="width: 20%; margin-top: 5%; margin:auto;">
+																<div class="card-body">
+																	<a href="realizar-cadastro-plano.php"><button type="button" class="btn btn-primary">Realizar Pagamento</button></a>
+																</div>
+															</div>
 									<div class="card text-center"  style="width: 20%; margin-top: 5%; margin:auto;">
 																<div class="card-body">
 																	<a href="realizar-cadastro-plano.php"><button type="button" class="btn btn-primary">Cadastrar um Plano</button></a>

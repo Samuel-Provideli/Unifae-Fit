@@ -41,6 +41,8 @@
                                 <label for="date">Digite seu endereço:</label>
                                 <input type="text" name="endereco" class="form-control" placeholder="Endereço" maxlength="150">
                             </div> <!--endereço-->
+
+                            
     
     
                             <button class="btn btn-primary btn-block mb-4" type="submit">Cadastre-se</button>
@@ -58,10 +60,11 @@
 
 </main>
 
- <!-- <div class="form-group mb-3">
+ <!--                           <div class="form-group mb-3">
                                 <select name="plataforma" required="required" class="form-control">
                                     <option value="">Escolha um plano</option>
                                     <option value="Básico">Básico</option> 
                                     <option value="Intermediário">Intermediário</option>
                                     <option value="Premium">Premium</option>
-                                </select>                     OPCAO DE ESCOLHAS PARA INCLUIR FUTURAMENTE NO FORM DO USUAURIO-->
+                                </div>
+                                </select>                     OPCAO DE ESCOLHAS PARA INCLUIR FUTURAMENTE NO FORM DO USUAURIO -->
