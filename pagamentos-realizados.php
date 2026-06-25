@@ -15,7 +15,6 @@ if(isset($_POST['id_usuario'],$_POST['data_venc'],$_POST['data_pag'],$_POST['val
     $obPagamentos->forma_pag = $_POST['forma_pag'];
     $obPagamentos-> realizarPagamento();
     
-    print_r($obPagamentos);
     
    //PARA QUINTA VER O ERRO DE NAO PUXAR O ID DE PAGAMENTOS!
 } else {

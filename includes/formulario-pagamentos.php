@@ -1,3 +1,10 @@
+<?php
+
+use \app\Entity\Usuario;
+require_once 'app/Entity/Usuario.php';
+$usuarios = Usuario::getUsuarios();
+
+?>
 <main>
 
 <div class="card borderless" style="width: 30%; margin: 3%;">
@@ -12,8 +19,22 @@
     <form action="pagamentos-realizados.php" method="post">
     
                             <div class="form-group mb-3">
-                                <label for="text">Digite o nome do aluno:</label>
-                                <input type="text" name="id_usuario" class="form-control" id="Username" placeholder="Nome do aluno" maxlength="150">
+                                <label for="text">Digite o nome do Aluno:</label>
+                                <select name="id_usuario"  class="form-control mb-4 mt-2" >
+                                <option>Selecione o aluno</option>
+                                <?php 
+
+                                foreach($usuarios as $usuario){
+                                    echo "<option value='".$usuario->idUsuario."'>".$usuario->nome."</option>";
+                                }
+                                
+                                ?>
+
+                                </select>
+                                
+
+
+
                             </div> <!--Nome do plano-->
 
                             

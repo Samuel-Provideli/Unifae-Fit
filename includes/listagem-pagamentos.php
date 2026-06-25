@@ -12,10 +12,10 @@ $resultado = '';
 
     foreach($pagamento as $pagamentos){
         $resultado .= '<tr>
-                    <td>'.$pagamentos->idPagamentos.'</td>
+                    <td>'.$pagamentos->idPagamento.'</td>
                     <td>'.$pagamentos->nome.'</td> 
-                    <td>'.$pagamentos->data_venc.'</td>
-                    <td>'.$pagamentos->data_pag.'</td>
+                    <td>'.date("d/m/Y", strtotime($pagamentos->data_pag)).'</td>
+                    <td>'.date("d/m/Y", strtotime($pagamentos->data_venc)).'</td>
                     <td>'.$pagamentos->valor_pag.'</td>
                     <td>'.$pagamentos->forma_pag.'</td>
                     <td>'.$pagamentos->status_pago.'</td>
@@ -23,8 +23,7 @@ $resultado = '';
                     
                     </tr>';
     }
-    //PARA AMANHA VERIFICAR LIGACOES E TERMINAR A CONEXAO JUNTO COM O FORMULARIO DE PAGAMENTOS E TESTAR COM O BANCO DE DADOS, CUIDADO COM ERROS DE DIGITACOES E LETRAS DIFERENTES!!
-
+  
 ?>
 
 <main>
@@ -38,8 +37,8 @@ $resultado = '';
                 <tr>
                     <th>ID</th>
                     <th>Nome do aluno</th>
-                    <th>Data de vencimento</th>
                     <th>Data de pagamentos</th>
+                    <th>Data de vencimento</th>
                     <th>Valor a ser pago</th>
                     <th>Forma de pagar</th>
                     <th>Status do pagamento</th>

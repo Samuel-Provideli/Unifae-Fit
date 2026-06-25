@@ -2,7 +2,7 @@
 
 use \app\Entity\Planos;
 
-require_once 'app\Entity\Planos.php';
+require_once 'app/Entity/Planos.php';
 
 $plano = Planos::getPlanos();
 

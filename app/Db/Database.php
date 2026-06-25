@@ -126,7 +126,23 @@ class Database{
         
     }
 
+    public function selectTreinos($where = null, $order = null, $limit = null){
 
+        $fields = 'p.idTreinos, c.nome, p.nome_treinos, p.objetivo, p.data_treinos, p.observacoes, p.status_treinos';
+
+        $table = 'treinos as p JOIN usuario as c on p.id_usuario = c.idUsuario';
+
+        $where = strlen($where) ? 'WHERE '.$where: '';
+        $order = strlen($order) ? 'ORDER BY '.$order: '';
+        $limit = strlen($limit) ? 'LIMIT '.$limit: '';
+
+         $query = 'SELECT '.$fields. ' FROM '.$table.' '.$where.''.$order.''.$limit;
+        return $this->execute($query);
+
+
+
+
+    }
 
 
 
