@@ -32,9 +32,9 @@
 
 			<div class="card text-center"  style="width: 20%; margin-top: 3%;">
 										<div class="card-body">
-											<h5 class="card-title">Ver Planos e Alunos</h5>
-											<p class="card-text">Acessar alunos com os planos.</p>
-											<a href="#!" class="btn  btn-primary">Acessar</a>
+											<h5 class="card-title">Ver Alunos Matriculados</h5>
+											<p class="card-text">Acessar a matricula dos alunos.</p>
+											<a href="lista-matricula.php" class="btn  btn-primary">Acessar</a>
 										</div>
 									</div>
 
@@ -55,7 +55,7 @@
 								</div>
 		<div style="display: flex; justify-content:space-around; ">		
 
-			<div class="card text-center"  style="width: 20%; margin-top: 5%;">
+			<div class="card text-center"  style="width: 20%; margin-top: 2%;">
 										<div class="card-body">
 											<h5 class="card-title">Ver os Treinos</h5>
 											<p class="card-text">Acessar os treinos e os alunos vinculados.</p>
@@ -93,11 +93,19 @@
 																<div class="card-body">
 																	<a href="realizar-treinos.php"><button type="button" class="btn btn-primary">Criar um Treinamento</button></a>
 																</div>
-								</div>
-								
-									
+															</div>
 															
-								</div>
-							</div>				
-					
+															
+														</div>
+
+									<div style="display: flex; margin-top:3%;">
+
+									<div class="card text-center"  style="width: 20%; margin-top: 5%; margin:auto;">
+																<div class="card-body">
+																	<a href="realizar-matricula.php"><button type="button" class="btn btn-primary">Realizar Matricula</button></a>
+																</div>
+															</div>		
+															
+															
+									</div>
                 

@@ -144,6 +144,17 @@ class Database{
 
     }
 
+    public function selectMatricula($where = null, $order = null, $limit = null){
+
+        $fields = 'p.idMatricula, c.nome, t.nome_plano, t.valor_plano, p.data_inic, p.data_term, p.status';
+
+        $table = 'matricula as p join usuario as c on p.id_usuario = c.idUsuario join planos as t on p.id_planos = t.idPlanos;';
+
+        $query = 'SELECT '.$fields. ' FROM '.$table.' '.$where.''.$order.''.$limit;
+        return $this->execute($query);
+
+        
+    }
 
 
 
