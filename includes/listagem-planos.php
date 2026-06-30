@@ -17,6 +17,14 @@ foreach($plano as $planos){
                     <td>'.$planos->valor_plano.'</td>
                     <td>'.$planos->qnt_aulas.'</td>
                     <td>'.$planos->status_plano.'</td>
+                               
+                    <td><a href="editar.php?idPlanos='.$planos->idPlanos.'">
+                    <button type="button" class="btn btn-primary">Editar</button>
+                    </a>
+                    <a href="excluir.php?idPlanos='.$planos->idPlanos.'">
+                    <button type="button" class="btn btn-danger">Excluir</button>
+                    </a></td>
+                    
                     
                     </tr>';
                 }
@@ -39,6 +47,8 @@ foreach($plano as $planos){
                     <th>Valor</th>
                     <th>Quantidade de aulas</th>
                     <th>Status do plano</th>
+                    <th>Editar</th>
+
                 </tr>
             </thead>
             <tbody>

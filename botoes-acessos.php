@@ -81,7 +81,7 @@
 
 									<div class="card text-center"  style="width: 20%; margin-top: 5%; margin:auto;">
 																<div class="card-body">
-																	<a href="realizar-cadastro-plano.php"><button type="button" class="btn btn-primary">Realizar Pagamento</button></a>
+																	<a href="realizar-pagamentos.php"><button type="button" class="btn btn-primary">Realizar Pagamento</button></a>
 																</div>
 															</div>
 									<div class="card text-center"  style="width: 20%; margin-top: 5%; margin:auto;">

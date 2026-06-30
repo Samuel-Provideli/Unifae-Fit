@@ -58,19 +58,6 @@ $planos = Planos::getPlanos();
    
                             </div>
 
-
-                            <div class="form-group mb-3">
-                                <label for="date">Data de Inicialização:</label>
-                                <input type="date" name="data_inic" class="form-control" placeholder="Data">
-                            </div> <!--Data para digitar-->
-
-
-                            <div class="form-group mb-3">
-                                <label for="date">Data de Termino:</label>
-                                <input type="date" name="data_term" class="form-control" placeholder="Data">
-                            </div> <!--Data para digitar-->
-
-
                             
                             
                             <button class="btn btn-primary btn-block mb-4" type="submit">Cadastrar Matricula</button>

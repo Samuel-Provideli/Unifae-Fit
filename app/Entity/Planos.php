@@ -34,7 +34,7 @@ require_once 'app/Db/Database.php';
                 'duracao_plano'=> $this->duracao_plano,
                 'valor_plano'=> $this->valor_plano,
                 'qnt_aulas'=> $this->qnt_aulas,
-                'status_plano'=> 1
+                'status_plano'=> 'ativo'
 
 
             ]);
@@ -46,7 +46,12 @@ require_once 'app/Db/Database.php';
 
             }
 
+        //  Configuraçao de um botao de editar para adminstradores:
 
+        public static function getPlano($idPlanos){
+            return(new Database('planos'))->select('idPlanos = '. $idPlanos)
+                                        ->fetchObject(self::class);
+     }
 
 
     }

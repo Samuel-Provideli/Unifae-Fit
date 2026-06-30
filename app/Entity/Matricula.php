@@ -15,10 +15,6 @@ class Matricula{
 
     public $id_planos;
 
-    public $data_inic;
-
-    public $data_term;
-
     public $status;
 
     
@@ -31,8 +27,7 @@ class Matricula{
             'idMatricula'=>$this->idMatricula,
             'id_usuario'=>$this->id_usuario,
             'id_planos'=>$this->id_planos,
-            'data_inic'=>$this->data_inic,
-            'data_term'=>$this->data_term,
+     
             'status'=> 'ativo'
 
 

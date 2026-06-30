@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Flat Able - Premium Admin Template by Phoenixcoded</title>
+
 
 	
     <meta charset="utf-8">
@@ -87,8 +87,7 @@
 					<li class="nav-item pcoded-hasmenu">
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Autenticação</span></a>
 					    <ul class="pcoded-submenu">
-					        <li><a href="auth-signup.html" target="_blank">Cadastre-se</a></li>
-					        <li><a href="auth-signin.html" target="_blank">Faça login</a></li>
+					        <li><a href="comeco-autenficacao.php" target="_blank">Faça login</a></li>
 					    </ul>
 					</li>
 					<li class="nav-item"><a href="sample-page.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
