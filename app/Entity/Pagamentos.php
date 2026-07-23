@@ -8,7 +8,7 @@ require_once 'app/Db/Database.php';
 
 class Pagamento{
 
-    public $idPagamentos;
+    public $idPagamento;
 
     public $id_usuario; //id adicionado assim como esta no banco de dados pois precisa estar igual e escrito da mesma forma em todos os lugares que ira usar!!
 
@@ -25,18 +25,29 @@ class Pagamento{
 
     public function realizarPagamento(){
         $obDatabase = new Database('pagamento');
-        $this->idPagamentos = $obDatabase -> insert([
+        $this->idPagamento = $obDatabase -> insert([
 
             'id_usuario'=>$this->id_usuario,
             'data_venc'=>$this->data_venc,
             'data_pag'=>$this->data_pag,
             'valor_pag'=>$this->valor_pag,
             'forma_pag'=>$this->forma_pag,
-            'status_pago'=> 'pendente' //basicamente erro de status novamente, pois ele estava em lugares que nao deveriam estar
+            'status_pago'=>$this->status_pago //basicamente erro de status novamente, pois ele estava em lugares que nao deveriam estar
 
 
         ]);
     }
+
+    public function atualizar(){
+            return(new Database('pagamento'))->update('idPagamento = '.$this->idPagamento,[
+            'id_usuario'=>$this->id_usuario,
+            'data_venc'=>$this->data_venc,
+            'data_pag'=>$this->data_pag,
+            'valor_pag'=>$this->valor_pag,
+            'forma_pag'=>$this->forma_pag,
+            'status_pago'=>$this->status_pago
+
+            ]);}
 
     public static function getPagamentos($where = null, $order = null, $limit = null){
         return(new Database('pagamento'))->selectPagamentos($where,$order,$limit)
@@ -46,6 +57,11 @@ class Pagamento{
 
     }
 
+    //get no singular busca apenas um item da lista, usado em editar algo, ou mudar algo especifico de somente 1 id
+    public static function getPagamento($idPagamento){
+    return (new Database('pagamento'))->select('idPagamento = '.$idPagamento)
+                                        ->fetchObject(self::class);
+}
 
 
 

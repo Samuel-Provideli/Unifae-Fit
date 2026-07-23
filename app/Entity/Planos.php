@@ -19,29 +19,47 @@ require_once 'app/Db/Database.php';
         public $duracao_plano;
 
         public $valor_plano;
-
+        
         public $qnt_aulas;
-
+        
         public $status_plano;
-
-
+        
+        
         public function cadastrarPlanos(){
-           $obDatabase = new Database('planos');
+            $obDatabase = new Database('planos');
             $this -> idPlanos = $obDatabase -> insert([
-
+                
                 'nome_plano'=> $this->nome_plano,
                 'desc_plano'=> $this->desc_plano,
                 'duracao_plano'=> $this->duracao_plano,
                 'valor_plano'=> $this->valor_plano,
                 'qnt_aulas'=> $this->qnt_aulas,
-                'status_plano'=> 'ativo'
+                'status_plano'=> $this->status_plano
+                
+                
+                ]);
+                
+                }
 
+
+        public function atualizar(){
+            return(new Database('planos'))->update('idPlanos = '.$this->idPlanos,[
+                'nome_plano'=> $this->nome_plano,
+                'desc_plano'=> $this->desc_plano,
+                'duracao_plano'=> $this->duracao_plano,
+                'valor_plano'=> $this->valor_plano,
+                'qnt_aulas'=> $this->qnt_aulas,
+                'status_plano'=> $this->status_plano
 
             ]);
-        
         }
+        public function excluir(){
+            return (new Database('planos'))->delete('idPlanos = '.$this->idPlanos);
+        }
+
+
         public static function getPlanos($where = null, $order = null, $limit = null){
-                return(new Database('planos'))->select($where,$order,$limit)
+            return(new Database('planos'))->select($where,$order,$limit)
                                             ->fetchAll(PDO::FETCH_CLASS,self::class);
 
             }
@@ -54,7 +72,8 @@ require_once 'app/Db/Database.php';
      }
 
 
-    }
+        }
+    
 
 
 

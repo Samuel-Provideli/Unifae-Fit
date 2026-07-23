@@ -11,7 +11,19 @@ $resultado = '';
                                                 //na ordem correta voce invez de colocar o id_(foreikey) voce coloca o nome da coluna que quer puxar o dado para mostrar, no caso foi o nome da pessoa, somente aqui se coloca o dado que quer puxar, porem deve estar de acordo com o dataBase tmb no select feito!
 
     foreach($pagamento as $pagamentos){
+
+    
+                    if($pagamentos->status_pago == 'pendente'){
+                        $textoBotao = 'Marcar Pago';
+                        $corBotao = 'btn-success';
+                    } 
+                    else {
+                        $textoBotao = 'Marcar Pendente';
+                        $corBotao = 'btn-warning';
+                    }
         $resultado .= '<tr>
+
+
                     <td>'.$pagamentos->idPagamento.'</td>
                     <td>'.$pagamentos->nome.'</td> 
                     <td>'.date("d/m/Y", strtotime($pagamentos->data_pag)).'</td>
@@ -19,9 +31,14 @@ $resultado = '';
                     <td>'.$pagamentos->valor_pag.'</td>
                     <td>'.$pagamentos->forma_pag.'</td>
                     <td>'.$pagamentos->status_pago.'</td>
-                
-                    
-                    </tr>';
+
+                    <td>
+                        <form method="post" action="alterar-status-pagamento.php">
+                            <input type="hidden" name="idPagamento" value="'.$pagamentos->idPagamento.'">
+                            <button type="submit" class="btn '.$corBotao.'">'.$textoBotao.'</button>
+                        </form>
+                    </td>
+';
     }
   
 ?>
@@ -42,6 +59,7 @@ $resultado = '';
                     <th>Valor a ser pago</th>
                     <th>Forma de pagar</th>
                     <th>Status do pagamento</th>
+                   
                 </tr>
             </thead>
             <tbody>

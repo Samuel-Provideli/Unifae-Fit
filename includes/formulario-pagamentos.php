@@ -65,6 +65,14 @@ $usuarios = Usuario::getUsuarios();
                                     <option value="boleto">Boleto</option>
                                 </div>
                                 </select> 
+
+                            <div class="form-group mb-3">
+                            <select name="status_pago" required="required" class="form-control mb-4 mt-4" >
+                                <option value="">Forma de Pagamento:</option>
+                                <option value="pendente">Pendente</option> 
+                                <option value="pago">Pago</option>
+                            </div>
+                            </select> 
                             
                             
                             <button class="btn btn-primary btn-block mb-4" type="submit">Cadastrar Plano</button>

@@ -49,7 +49,10 @@ $planos = Planos::getPlanos();
                                 <?php 
 
                                 foreach($planos as $plano){
-                                    echo "<option value='".$plano->idPlanos."'>".$plano->nome_plano."</option>";
+                                    //permite que apenas os planos ativos aparecao
+                                    if($plano->status_plano == 'ativo'){
+                                        echo "<option value='".$plano->idPlanos."'>".$plano->nome_plano."</option>";
+                                    }
                                 }
                                 
                                 ?>

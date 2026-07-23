@@ -110,6 +110,32 @@ class Database{
         return $this->execute($query);
     }
 
+    public function update($where,$values){
+
+    $fields = array_keys($values);
+
+    $query = 'UPDATE '.$this->table.' SET '.implode('=?, ',$fields).'=? WHERE '.$where;
+
+    $this->execute($query,array_values($values));
+
+    return true;
+
+    }
+
+    public function delete($where){
+        $query = ' DELETE FROM ' .$this->table. ' WHERE '.$where;
+
+        $this->execute($query);
+
+        return true;
+    }
+
+
+
+
+
+
+
     public function selectPagamentos($where = null, $order = null, $limit = null){
 
         $fields = 'p.idPagamento, u.nome , p.data_pag, p.data_venc, p.valor_pag, p.forma_pag, p.status_pago'; //basicamnete pegou o valor de filds e setou o codg usado no banco de dados do join

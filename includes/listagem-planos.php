@@ -18,10 +18,10 @@ foreach($plano as $planos){
                     <td>'.$planos->qnt_aulas.'</td>
                     <td>'.$planos->status_plano.'</td>
                                
-                    <td><a href="editar.php?idPlanos='.$planos->idPlanos.'">
+                    <td><a href="editar-planos.php?idPlanos='.$planos->idPlanos.'">
                     <button type="button" class="btn btn-primary">Editar</button>
                     </a>
-                    <a href="excluir.php?idPlanos='.$planos->idPlanos.'">
+                    <a href="excluir-planos.php?idPlanos='.$planos->idPlanos.'">
                     <button type="button" class="btn btn-danger">Excluir</button>
                     </a></td>
                     
