@@ -35,12 +35,31 @@ class Treinos{
             'status_treinos'=> 'ativo'
         ]);
     }
+    public function atualizar(){
+        return(new Database('treinos'))->update('idTreinos = '.$this->idTreinos,[
+        'id_usuario'=> $this->id_usuario,
+        'nome_treinos'=>$this->nome_treinos,
+        'objetivo'=>$this->objetivo,
+        'data_treinos'=>$this->data_treinos,
+        'observacoes'=>$this->observacoes,
+        'status_treinos'=> $this->status_treinos
+    ]);
+    }
+
+
+
 
          public static function getTreinos($where = null, $order = null, $limit = null){
                 return(new Database('treinos'))->selectTreinos($where,$order,$limit) //erro que faltou é escrever o select correspondente a esta tabela q era o selectTreinos ai ele consegue formar o join e puxar oq se procura na outra tabela
                                             ->fetchAll(PDO::FETCH_CLASS,self::class);
 
             }
+
+        public static function getTreino($idTreinos){
+            return (new Database('treinos'))->select('idTreinos ='. $idTreinos)
+                                            ->fetchObject(self::class);
+
+        }
 
 
 

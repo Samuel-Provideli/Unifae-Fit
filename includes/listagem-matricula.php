@@ -13,23 +13,61 @@ $resultado = '';
 
 
 foreach($matricula as $matriculas){
+    if($matriculas->status == 'ativo' && $matriculas->data_term < date("Y-m-d")){
+        $matriculas->status = 'vencido';
+        $matriculas->atualizar();
+    }
+
+    if($matriculas->status == 'ativo'){
+        $text = 'Suspender';
+        $corBotao = 'btn-warning';
+    }
+    if($matriculas->status == 'suspensa'){
+        $text = 'Ativar';
+        $corBotao = 'btn-success';
+    }
+
+
         $resultado .= '<tr>
                     <td>'.$matriculas->idMatricula.'</td>
                     <td>'.$matriculas->nome.'</td> 
                     <td>'.$matriculas->nome_plano.'</td> 
                     <td>'.$matriculas->valor_plano.'</td> 
-                    <td>'.date("d/m/Y").'</td> 
-                    <td>'.date('d/m/Y', strtotime('+' . $matriculas->duracao_plano . ' days')).'</td>
+                    <td>'.date("d-m-Y", strtotime($matriculas->data_inic)) .'</td> 
+                    <td>'.date("d-m-Y", strtotime($matriculas->data_term)) .'</td>
+                     <td>'.$matriculas->status.'</td>';
+
+                     
+                     if($matriculas->status =='ativo' || $matriculas->status =='suspensa'){
+                         
+                         $resultado .='<td>
+                         <form method="post" action="alterar-status-matricula.php">
+                         <input type="hidden" name="idMatricula" value="'.$matriculas->idMatricula.'">
+                         <button type="submit" class="btn '.$corBotao.'">'.$text.'</button>
+                         </form>
+                         </td>';
+                         }
+                         else{
+                             $resultado .= '<td></td>';
+                             }
 
 
-                  
-                     <td>'.$matriculas->status.'</td>
-           
-                    </tr>';
+                    if($matriculas->status =='ativo' || $matriculas->status =='suspensa'){
+                         
+                         $resultado .='<td>
+                         <a href="cancelar-matricula.php?idMatricula='.$matriculas->idMatricula.'">
+                         <button type="button" class="btn btn-danger">Cancelar</button>
+                         </a></td>';
+                         }
+                         else{
+                             $resultado .= '<td></td>';
+                             }
+                             
+                             $resultado .='</tr>';
 
 
 }
-            //Para a proxima semana resolver as datas da matricula e apagar todas pois as datas sao relacionadas ao plano, deve se fazer uma conta da data onde se pega a data de hoje multiplica pela duraçao e entrega a data final! organizar e mostrar, a matricula tera apenas 2 coisas selecionar o nome e o plano no formulario, apenas
+         
 
 
 ?>

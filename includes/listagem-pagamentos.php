@@ -12,8 +12,12 @@ $resultado = '';
 
     foreach($pagamento as $pagamentos){
 
-    
-                    if($pagamentos->status_pago == 'pendente'){
+        
+                    if($pagamentos->status_pago == 'pendente' && $pagamentos->data_venc < date("Y-m-d")){
+                        $pagamentos->status_pago = 'atrasado';
+                        $pagamentos->atualizar();
+                    }
+                    if($pagamentos->status_pago == 'pendente' || $pagamentos->status_pago == 'atrasado'){
                         $textoBotao = 'Marcar Pago';
                         $corBotao = 'btn-success';
                     } 
@@ -21,6 +25,10 @@ $resultado = '';
                         $textoBotao = 'Marcar Pendente';
                         $corBotao = 'btn-warning';
                     }
+
+
+
+
         $resultado .= '<tr>
 
 
@@ -38,7 +46,7 @@ $resultado = '';
                             <button type="submit" class="btn '.$corBotao.'">'.$textoBotao.'</button>
                         </form>
                     </td>
-';
+                    </tr>';
     }
   
 ?>

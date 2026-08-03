@@ -138,7 +138,7 @@ class Database{
 
     public function selectPagamentos($where = null, $order = null, $limit = null){
 
-        $fields = 'p.idPagamento, u.nome , p.data_pag, p.data_venc, p.valor_pag, p.forma_pag, p.status_pago'; //basicamnete pegou o valor de filds e setou o codg usado no banco de dados do join
+        $fields = 'p.idPagamento, p.id_usuario, u.nome , p.data_pag, p.data_venc, p.valor_pag, p.forma_pag, p.status_pago'; //basicamnete pegou o valor de filds e setou o codg usado no banco de dados do join
         $table = 'pagamento AS p JOIN usuario AS u ON p.id_usuario = u.idUsuario';//onde ja esta setado from no comando dividiu em dois, por isso o uso de uma var chamada table com o restante dos dados
         
         $where = strlen($where) ? 'WHERE '.$where: '';
@@ -154,7 +154,7 @@ class Database{
 
     public function selectTreinos($where = null, $order = null, $limit = null){
 
-        $fields = 'p.idTreinos, c.nome, p.nome_treinos, p.objetivo, p.data_treinos, p.observacoes, p.status_treinos';
+        $fields = 'p.idTreinos,p.id_usuario, c.nome, p.nome_treinos, p.objetivo, p.data_treinos, p.observacoes, p.status_treinos';
 
         $table = 'treinos as p JOIN usuario as c on p.id_usuario = c.idUsuario';
 
@@ -172,9 +172,13 @@ class Database{
 
     public function selectMatricula($where = null, $order = null, $limit = null){
 
-        $fields = 'p.idMatricula, c.nome, t.nome_plano, t.valor_plano, t.duracao_plano, p.status';
+        $fields = 'p.idMatricula, c.nome, t.nome_plano, t.valor_plano, t.duracao_plano, p.data_inic, p.data_term, p.status';
 
-        $table = 'matricula as p join usuario as c on p.id_usuario = c.idUsuario join planos as t on p.id_planos = t.idPlanos;';
+        $table = 'matricula as p join usuario as c on p.id_usuario = c.idUsuario join planos as t on p.id_planos = t.idPlanos';
+
+        $where = strlen($where) ? 'WHERE '.$where: '';
+        $order = strlen($order) ? 'ORDER BY '.$order: '';
+        $limit = strlen($limit) ? 'LIMIT '.$limit: '';
 
         $query = 'SELECT '.$fields. ' FROM '.$table.' '.$where.''.$order.''.$limit;
         return $this->execute($query);

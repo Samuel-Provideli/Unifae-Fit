@@ -1,14 +1,31 @@
 <?php
 
 use \app\Entity\Usuario;
+use \app\Entity\Pagamento;
 
 require_once 'app\Entity\Usuario.php';
+require_once 'app\Entity\Pagamentos.php';
+
 
 $usuarios = Usuario::getUsuarios();
 
 $resultado = '';
 
 foreach($usuarios as $usuario){
+
+    //essa var guarda o seguinte comando: ele procura la na tabela pagamentos atraves o get(plural) pois falamos de varios dados nao é uma analise em um especifico, ele verifica atraves do id se algum id (dos usuarios) se relaciona com o status 'atrasado' para fornecer a informaçao no if e else
+
+    $pagamAtrsdos = Pagamento::getPagamentos("id_usuario = ".$usuario->idUsuario." AND status_pago = 'atrasado'");
+    
+
+
+    //o count ele é um contador de array do php ele verifica se foi encontrado pelo menos 1 que corresponda com 'atrasado' por este motivo foi comparado com 0
+    if(count($pagamAtrsdos) > 0){
+        $statusExibido = 'inadimplente';
+    } else {
+        $statusExibido = $usuario->status;
+    }
+
     $resultado .= '<tr>
                     <td>'.$usuario->idUsuario.'</td>
                     <td>'.$usuario->nome.'</td>
@@ -16,7 +33,7 @@ foreach($usuarios as $usuario){
                     <td>'.date("d/m/Y", strtotime($usuario->data_nasc)).'</td> 
                     <td>'.$usuario->telef.'</td>
                     <td>'.$usuario->endereco.'</td>
-                    <td>'.$usuario->status.'</td>
+                    <td>'.$statusExibido.'</td>
                     
                     
                     </tr>';
