@@ -68,7 +68,7 @@ $usuarios = Usuario::getUsuarios();
 
                             <div class="form-group mb-3">
                             <select name="status_pago" required="required" class="form-control mb-4 mt-4" >
-                                <option value="">Forma de Pagamento:</option>
+                                <option value="">Status do Pagamento:</option>
                                 <option value="pendente">Pendente</option> 
                                 <option value="pago">Pago</option>
                             </div>

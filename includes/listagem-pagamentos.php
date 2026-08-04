@@ -67,6 +67,7 @@ $resultado = '';
                     <th>Valor a ser pago</th>
                     <th>Forma de pagar</th>
                     <th>Status do pagamento</th>
+                    <th>Atividades</th>
                    
                 </tr>
             </thead>

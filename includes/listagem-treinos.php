@@ -71,6 +71,7 @@ foreach($treino as $treinos){
                     <th>Data de criação</th>
                     <th>Observações</th>
                     <th>Status do Treino</th>
+                    <th>Finalizar Treino</th>
                 </tr>
             </thead>
             <tbody>

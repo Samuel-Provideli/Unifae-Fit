@@ -88,6 +88,7 @@ foreach($matricula as $matriculas){
                     <th>Data de Inicio</th>
                     <th>Data do Termino</th>
                     <th>Status da matricula</th>
+                    <th>Atividades</th>
                 </tr>
             </thead>
             <tbody>

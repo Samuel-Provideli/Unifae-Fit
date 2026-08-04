@@ -15,7 +15,7 @@ $obMatricula = Matricula::getMatriculasNome($_GET['idMatricula']);
 			<div class="align-items-center">
 				<div class="col-md-12">
 					    <div class="card-body">
-						<h4 class="f-w-400">Excluir este Plano</h4>
+						<h4 class="f-w-400">Cancelar Matricula</h4>
 						<hr> 
 
 

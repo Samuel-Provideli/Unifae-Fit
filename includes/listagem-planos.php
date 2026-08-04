@@ -47,7 +47,7 @@ foreach($plano as $planos){
                     <th>Valor</th>
                     <th>Quantidade de aulas</th>
                     <th>Status do plano</th>
-                    <th>Editar</th>
+                    <th>Atividades</th>
 
                 </tr>
             </thead>

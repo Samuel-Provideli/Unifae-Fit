@@ -42,8 +42,8 @@
 					<div class="main-menu-header">
 						<img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="User-Profile-Image">
 						<div class="user-details">
-							<span>Usuario</span>
-							<div id="more-details">UX Designer<i class="fa fa-chevron-down m-l-5"></i></div>
+							<span>Administrador</span>
+							<div id="more-details">Unifae Fit<i class="fa fa-chevron-down m-l-5"></i></div>
 						</div>
 					</div>
 					<div class="collapse" id="nav-user-link">
@@ -63,7 +63,7 @@
 					    <a href="index.php" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Início</span></a>
 					</li>
 
-                    <li class="nav-item pcoded-hasmenu">
+                    <!-- <li class="nav-item pcoded-hasmenu">
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Troca de acesso</span></a>
 					    <ul class="pcoded-submenu">
 
@@ -73,7 +73,7 @@
 
 
 					    </ul>
-					</li>
+					</li> -->
 					
 
 
@@ -90,7 +90,7 @@
 					        <li><a href="comeco-autenficacao.php" target="_blank">Faça login</a></li>
 					    </ul>
 					</li>
-					<li class="nav-item"><a href="sample-page.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
+					<!-- <li class="nav-item"><a href="sample-page.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li> -->
 
 				</ul>
 				
@@ -108,8 +108,8 @@
 					<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
 					<a href="#!" class="b-brand">
 						<!-- ========   change your logo hear   ============ -->
-						<img src="assets/images/logo.png" alt="" class="logo">
-						<img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+						<img src="assets/images/logo3.png" alt="logo unifae">
+						<!-- <img src="assets/images/logo-icon.png" alt="" class="logo-thumb"> -->
 					</a>
 					<a href="#!" class="mob-toggler">
 						<i class="feather icon-more-vertical"></i>
@@ -131,9 +131,9 @@
 						</li>
 						<li class="nav-item">
 							<div class="dropdown">
-								<a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+								<!-- <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
 									Dropdown
-								</a>
+								</a> -->
 								<div class="dropdown-menu profile-notification ">
 									<ul class="pro-body">
 										<li><a href="user-profile.html" class="dropdown-item"><i class="fas fa-circle"></i> Profile</a></li>
@@ -145,9 +145,9 @@
 						</li>
 						<li class="nav-item">
 							<div class="dropdown mega-menu">
-								<a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+								<!-- <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
 									Mega
-								</a>
+								</a> -->
 								<div class="dropdown-menu profile-notification ">
 									<div class="row no-gutters">
 										<div class="col">
@@ -200,9 +200,9 @@
 					<ul class="navbar-nav ml-auto">
 						<li>
 							<div class="dropdown">
-								<a class="dropdown-toggle" href="#" data-toggle="dropdown">
-									<i class="icon feather icon-bell"></i>
-									<span class="badge badge-pill badge-danger">5</span>
+								<!-- <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+									<i class="icon feather icon-bell"></i> -->
+									<!-- <span class="badge badge-pill badge-danger">5</span> -->
 								</a>
 								<div class="dropdown-menu dropdown-menu-right notification">
 									<div class="noti-head">
@@ -263,7 +263,7 @@
 							</div>
 						</li>
 						<li>
-							<div class="dropdown drp-user">
+							<!-- <div class="dropdown drp-user">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 									<i class="feather icon-user"></i>
 								</a>
@@ -280,7 +280,7 @@
 										<li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
 										<li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
 									</ul>
-								</div>
+								</div> -->
 							</div>
 						</li>
 					</ul>
