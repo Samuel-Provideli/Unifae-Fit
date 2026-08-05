@@ -50,7 +50,7 @@
     
     
                             <hr>    
-                            <p class="mb-2">Already have an account? <a href="auth-signin.html" class="f-w-400">Signin</a></p>
+                          
                         </div>
                     </div>
                 </div>

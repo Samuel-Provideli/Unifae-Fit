@@ -83,14 +83,44 @@
 						<label>Paginas</label>
 					</li>
 
-
+					<!-- Controle de acessos! -->
 					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Autenticação</span></a>
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Alunos</span></a>
 					    <ul class="pcoded-submenu">
-					        <li><a href="comeco-autenficacao.php" target="_blank">Faça login</a></li>
+					        <li><a href="realizar-cadastro.php">Cadastrar Aluno</a></li>
+					        <li><a href="lista-usuario.php">Alunos Cadastrados</a></li>
 					    </ul>
 					</li>
-					<!-- <li class="nav-item"><a href="sample-page.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li> -->
+
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Matriculas</span></a>
+					    <ul class="pcoded-submenu">
+					        <li><a href="realizar-matricula.php">Realizar Matricula</a></li>
+					        <li><a href="lista-matricula.php">Alunos Matriculados</a></li>
+					    </ul>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Pagamentos</span></a>
+					    <ul class="pcoded-submenu">
+					        <li><a href="realizar-pagamentos.php">Realizar Pagamento</a></li>
+					        <li><a href="lista-pagamentos.php">Pagamentos Realizados</a></li>
+					    </ul>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Treinos</span></a>
+					    <ul class="pcoded-submenu">
+					        <li><a href="realizar-treinos.php" >Realizar Treino</a></li>
+					        <li><a href="lista-treinos.php">Lista de Treinamentos</a></li>
+					    </ul>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text 	"></i></span><span class="pcoded-mtext">Planos</span></a>
+					    <ul class="pcoded-submenu">
+					        <li><a href="realizar-cadastro-plano.php">Cadastrar Plano</a></li>
+					        <li><a href="lista-planos.php" >Planos Cadastrados</a></li>
+					    </ul>
+					</li>
+					
 
 				</ul>
 				
@@ -108,7 +138,7 @@
 					<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
 					<a href="#!" class="b-brand">
 						<!-- ========   change your logo hear   ============ -->
-						<img src="assets/images/logo3.png" alt="logo unifae">
+						<img src="assets/images/logo4.png" alt="logo unifae">
 						<!-- <img src="assets/images/logo-icon.png" alt="" class="logo-thumb"> -->
 					</a>
 					<a href="#!" class="mob-toggler">
