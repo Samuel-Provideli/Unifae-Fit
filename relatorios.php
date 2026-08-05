@@ -31,6 +31,7 @@
     $contgMatricula = 0;
     $contgPlano = 0;
     $contgTreino = 0;
+    $contgTreinoFinalzd = 0;
     $contgPagamentos = 0;
     $ValorPago = 0;
     //data atual
@@ -54,7 +55,7 @@
     foreach($pagamentos as $pag){
         if($pag->status_pago=='pago'){
             
-        //data registrada dos dados do banco
+        //data registrada dos dados do banco e atribui as var do mes e ano atuais
             $mesPagamento = date('m', strtotime($pag->data_pag));
             $anoPagamento = date('Y', strtotime($pag->data_pag));
             
@@ -65,6 +66,7 @@
                 $ValorPago += $pag->valor_pag;
                 $Valor = number_format($ValorPago, 2, ',', '.');
         }
+
     }
         
         
@@ -76,8 +78,16 @@
         }
     }
     foreach($treino as $trei){
+        $mesTreino = date('m', strtotime($trei->data_treinos));
+        $anoTreino = date('Y', strtotime($trei->data_treinos));
+
         if($trei->status_treinos == 'ativo'){
             $contgTreino ++;
+        }  
+        elseif($trei->status_treinos == 'finalizado' && $mesTreino == $mesAtual && $anoTreino == $anoAtual){
+            $contgTreinoFinalzd ++;
+        
+
         }
     }
     
@@ -111,7 +121,7 @@
 										</div>
 									</div>
                                     
-                                    <div class="card text-center"  style="width: 20%; margin-top: 3%; border: 2px solid #8CDDCD;">
+            <div class="card text-center"  style="width: 20%; margin-top: 3%; border: 2px solid #8CDDCD;">
                                         <div class="card-body">
                                             <h5 class="card-title">Total de Treinos Ativos</h5>
 											<h2 class="card-text"><?=$contgTreino?></h2>
@@ -128,16 +138,28 @@
 									</div>
 									
                                 </div>	
+
+                        <div class="col-xl-12">
+	                        <div style="display: flex; justify-content:center; ">
                                 
                                  <div class="card text-center"  style="width: 20%; margin-top: 3%; border: 2px solid #8CDDCD;">
                                         <div class="card-body">
-                                            <h5 class="card-title">Valor recebido mensal</h5>
+                                            <h5 class="card-title">Valor recebido mensalmente</h5>
 											<h2 class="card-text">R$ <?=$Valor?></h2>
                                             
 										</div>
 									</div>
+                                    
+                                 <div class="card text-center"  style="width: 20%; margin-top: 3%; border: 2px solid #8CDDCD;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Treinos realizados neste mes</h5>
+											<h2 class="card-text"><?=$contgTreinoFinalzd?></h2>
+                                            
+										</div>
+									</div>
 
-
+                                </div>
+									</div>
 
 
 

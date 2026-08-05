@@ -96,7 +96,7 @@
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Matriculas</span></a>
 					    <ul class="pcoded-submenu">
 					        <li><a href="realizar-matricula.php">Realizar Matricula</a></li>
-					        <li><a href="lista-matricula.php">Alunos Matriculados</a></li>
+					        <li><a href="lista-matricula.php">Matriculas Cadastradas</a></li>
 					    </ul>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
@@ -110,7 +110,7 @@
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Treinos</span></a>
 					    <ul class="pcoded-submenu">
 					        <li><a href="realizar-treinos.php" >Realizar Treino</a></li>
-					        <li><a href="lista-treinos.php">Lista de Treinamentos</a></li>
+					        <li><a href="lista-treinos.php">Treinos Cadastrados</a></li>
 					    </ul>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
