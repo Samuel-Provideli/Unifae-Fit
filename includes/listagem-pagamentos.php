@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<a href="realizar-pagamentos.php" style="display: inline-block; text-decoration: none; margin: 2% 3%;">
+                  <button type="button" class="btn btn-primary"><h4>Realizar Pagamento</h4></button>
+                </a>
+
 <?php
 
 use app\Entity\Pagamento;

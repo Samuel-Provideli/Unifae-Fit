@@ -26,11 +26,11 @@ $planos = Planos::getPlanos();
                             <div class="form-group mb-3">
                                 <label for="text">Selecione o Aluno:</label>
                                 <select name="id_usuario"  class="form-control mb-4 mt-2" >
-                                <option>Selecione o aluno</option>
+                                <option>Selecione o CPF do aluno</option>
                                 <?php 
 
                                 foreach($usuarios as $usuario){
-                                    echo "<option value='".$usuario->idUsuario."'>".$usuario->nome."</option>";
+                                    echo "<option value='".$usuario->idUsuario."'>".$usuario->cpf."</option>";
                                 }
                                 
                                 ?>

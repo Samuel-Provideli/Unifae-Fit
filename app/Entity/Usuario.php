@@ -39,6 +39,18 @@ class Usuario{
         ]);
         
     }
+    public function atualizar(){
+            return(new Database('usuario'))->update('idUsuario = '.$this->idUsuario,[
+            'nome' => $this->nome,
+            'cpf' => $this->cpf,
+            'data_nasc' => $this->data_nasc,
+            'telef' => $this->telef,
+            'endereco' => $this->endereco,
+            'status' => 'ativo'
+
+
+            ]);
+    }
 
     public static function getUsuarios($where = null, $order = null, $limit = null){
         return(new Database('usuario'))->select($where,$order,$limit)

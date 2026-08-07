@@ -1,8 +1,8 @@
 <?php
 
-use \app\Entity\Usuario;
-require_once 'app/Entity/Usuario.php';
-$usuarios = Usuario::getUsuarios();
+use \app\Entity\Matricula;
+require_once 'app/Entity/Matricula.php';
+$usuarios = Matricula::getMatricula();
 
 ?>
 <main>
@@ -25,7 +25,7 @@ $usuarios = Usuario::getUsuarios();
                                 <?php 
 
                                 foreach($usuarios as $usuario){
-                                    echo "<option value='".$usuario->idUsuario."'>".$usuario->nome."</option>";
+                                    echo "<option value='".$usuario->idMatricula."'>".$usuario->nome."</option>";
                                 }
                                 
                                 ?>

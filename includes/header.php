@@ -85,39 +85,25 @@
 
 					<!-- Controle de acessos! -->
 					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Alunos</span></a>
-					    <ul class="pcoded-submenu">
-					        <li><a href="realizar-cadastro.php">Cadastrar Aluno</a></li>
-					        <li><a href="lista-usuario.php">Alunos Cadastrados</a></li>
-					    </ul>
+					    <a href="lista-usuario.php" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Alunos</span></a>
+					    
 					</li>
 
 					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Matriculas</span></a>
-					    <ul class="pcoded-submenu">
-					        <li><a href="realizar-matricula.php">Realizar Matricula</a></li>
-					        <li><a href="lista-matricula.php">Matriculas Cadastradas</a></li>
-					    </ul>
+					    <a href="lista-matricula.php" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Matriculas</span></a>
+					    
 					</li>
 					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Pagamentos</span></a>
-					    <ul class="pcoded-submenu">
-					        <li><a href="realizar-pagamentos.php">Realizar Pagamento</a></li>
-					        <li><a href="lista-pagamentos.php">Pagamentos Realizados</a></li>
-					    </ul>
+					    <a href="lista-pagamentos.php" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Pagamentos</span></a>
+					    
 					</li>
 					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Treinos</span></a>
-					    <ul class="pcoded-submenu">
-					        <li><a href="realizar-treinos.php" >Realizar Treino</a></li>
-					        <li><a href="lista-treinos.php">Treinos Cadastrados</a></li>
-					    </ul>
+					    <a href="lista-treinos.php" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Treinos</span></a>
+					
 					</li>
 					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text 	"></i></span><span class="pcoded-mtext">Planos</span></a>
+					    <a href="lista-planos.php" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text 	"></i></span><span class="pcoded-mtext">Planos</span></a>
 					    <ul class="pcoded-submenu">
-					        <li><a href="realizar-cadastro-plano.php">Cadastrar Plano</a></li>
-					        <li><a href="lista-planos.php" >Planos Cadastrados</a></li>
 					    </ul>
 					</li>
 					

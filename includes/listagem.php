@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<a href="realizar-cadastro.php" style="display: inline-block; text-decoration: none; margin: 2% 3%;">
+                  <button type="button" class="btn btn-primary"><h4>Cadastrar Aluno</h4></button>
+                </a>
+
 <?php
 
 use \app\Entity\Usuario;
@@ -35,6 +42,10 @@ foreach($usuarios as $usuario){
                     <td>'.$usuario->endereco.'</td>
                     <td>'.$statusExibido.'</td>
                     
+                  
+                    <td><a href="editar.php?idUsuario='.$usuario->idUsuario.'">
+                      <button type="button" class="btn btn-primary">Editar</button>
+                    </a></td>
                     
                     </tr>';
                 }
@@ -42,13 +53,7 @@ foreach($usuarios as $usuario){
                 
 ?>
                 
-                <!-- Antigo Botao de Editar inutilizado e nao acabado
-                <td><a href="editar.php?idUsuario='.$usuario->idUsuario.'">
-                  <button type="button" class="btn btn-primary">Editar</button>
-                </a>
-                <a href="excluir.php?idUsuario='.$usuario->idUsuario.'">
-                  <button type="button" class="btn btn-danger">Excluir</button>
-                </a></td> -->
+              
 
 
 <main>
@@ -67,6 +72,7 @@ foreach($usuarios as $usuario){
                     <th>Telefone</th>
                     <th>Endereco</th>
                     <th>Status</th>
+                    <th>Atividades</th>
                 </tr>
             </thead>
             <tbody>
